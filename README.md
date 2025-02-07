@@ -58,4 +58,30 @@ Distinct skill sets:
 Data Analysts focus on BI tools and SQL.
 Data Engineers specialize in databases and cloud technologies.
 Data Scientists emphasize programming and statistical modeling.
- 
+
+
+# The Analysis
+# 
+## 2.  How are in-demand skills trending for Data Analysts?
+
+```python
+from matplotlib.ticker import PercentFormatter
+ax = plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+for i in range(5):
+    plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i])
+
+plt.legend([], [], frameon=False)  # Hide the legend properly
+plt.show()
+```
+
+### Results
+![Trending Top Skills for Data Analysts in the US](3_Project/images/top_trending_skills_for_DA.png)
+*Bar graph visualizing the trending top skilld for data analysts in the US in 2023*
+
+### Insights:
+- SQL remains the top priority skill for Data Analysts.
+- Python is growing and competing with Tableau, making it an important technical skill.
+- Power BI is growing but still lags behind Tableau in visualization tools.
+- Excel remains essential and might surge at specific periods of the year.
